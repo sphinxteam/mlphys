@@ -1,0 +1,17 @@
+fig, axs = plt.subplots(2, 2)
+fig.tight_layout()
+
+alphas = np.linspace(0, 60, 1001)
+
+axs[0,0].plot(alphas, posterior(samples[:2], alphas, beta))
+axs[0,0].axvline(np.mean(samples[:2]), c = "r", lw = 2)
+axs[0,0].set_title(r"$N = 2$")
+axs[0,1].plot(alphas, posterior(samples[:5], alphas, beta))
+axs[0,1].axvline(np.mean(samples[:5]), c = "r", lw = 2)
+axs[0,1].set_title(r"$N = 5$")
+axs[1,0].plot(alphas, posterior(samples[:20], alphas, beta))
+axs[1,0].axvline(np.mean(samples[:20]), c = "r", lw = 2)
+axs[1,0].set_title(r"$N = 20$")
+axs[1,1].plot(alphas, posterior(samples[:100], alphas, beta))
+axs[1,1].axvline(np.mean(samples[:100]), c = "r", lw = 2)
+axs[1,1].set_title(r"$N = 100$")
