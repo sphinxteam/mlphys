@@ -4,6 +4,6 @@ def likelihood(x, y, m, d):
             y = mx + noise (iid Gaussian)
     """
     r = y - m*x
-    p = 1 / np.sqrt(2*np.pi*d) * exp(-1 / (2*d) * np.dot(r,r))
+    p = 1 / np.sqrt(2*np.pi*d) * np.exp(-1 / (2*d) * np.dot(r,r))
     return p
 
