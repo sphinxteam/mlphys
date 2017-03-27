@@ -1,6 +1,6 @@
 twitterOAuth.cfg
 *.dat
 .DS_Store
-.ipynb_checkpoints/*
+**/.ipynb_checkpoints/*
 __pychache__
 *.pyc
