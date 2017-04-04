@@ -66,3 +66,27 @@ def load_lfw_dataset(data_home='mldata', min_num_faces=1, random_state=None, sca
                     
 
 
+def catdog_train_generator(data_home='./mldata'):
+    """
+        Gets a random selection of cats and dogs to fill the specified
+        batch size.
+    """
+    n_cats = 12500
+    n_dogs = 12500
+    cat_prefix = '%s/%s' % (data_home, 'kaggle-catdog/train/cat.')
+    dog_prefix = '%s/%s' % (data_home, 'kaggle-catdog/train/dog.')
+
+    while 1:
+        is_cat = np.random.randint(0,2)
+
+
+# def get_random_catdog(batch_size=32):
+#     """
+#         Gets a random selection of cats and dogs to fill the specified
+#         batch size.
+#     """
+#     cat_idx = np.random.randint(0, 2, size=batch_size)
+#     # num_cats = np.random.randint(0,batch_size)
+
+#     # Now, we will loop over the batch size and get these values
+#     for i in range(batch_size):
